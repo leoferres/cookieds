@@ -23,7 +23,7 @@ mydate=$(date +'%Y')
   cat /home/leo/cookieds/mit.txt
 } >> "$1"/LICENSE
 
-cp /home/leo/cookieds/.gitignore "$1"
+cp /home/leo/cookieds/gitignore "$1"/.gitignore
 
 touch "$1"/src/__init__.py
 
