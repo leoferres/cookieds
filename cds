@@ -13,7 +13,7 @@ mkdir -p "$1"/references
 mkdir -p "$1"/reports/figures
 mkdir -p "$1"/src/{data,viz}
 
-touch "$1"/{LICENSE,README.md,requirements.txt,.env}
+touch "$1"/{AUTHORS.md,LICENSE,README.md,requirements.txt,.env}
 
 echo "Setting up MIT license"
 mydate=$(date +'%Y')
@@ -23,7 +23,9 @@ mydate=$(date +'%Y')
   cat /home/leo/cookieds/mit.txt
 } >> "$1"/LICENSE
 
+echo -e "# Project Contributors\n\n * Leo Ferres <leoferres@gmail.com>" >> "$1"/AUTHORS.md
 cp /home/leo/cookieds/gitignore "$1"/.gitignore
+cp /home/leo/cookieds/Makefile.tpl "$1"/Makefile
 
 touch "$1"/src/__init__.py
 
